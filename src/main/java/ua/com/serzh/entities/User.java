@@ -1,5 +1,7 @@
 package ua.com.serzh.entities;
 
+import java.util.List;
+
 /**
  * Created by Serzh on 10/25/16.
  */
@@ -8,6 +10,9 @@ public class User {
     private String name;
     private String password;
 
+    private List<Contact> contacts;
+
+
     public User() {
     }
 
@@ -15,6 +20,15 @@ public class User {
         this.name = name;
         this.password = password;
     }
+
+    public List<Contact> getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(List<Contact> contacts) {
+        this.contacts = contacts;
+    }
+
 
     public Integer getUserId() {
         return this.userId;

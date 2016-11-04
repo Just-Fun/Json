@@ -1,10 +1,8 @@
-package ua.com.serzh.mkyong;
+package ua.com.serzh.jackson;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import ua.com.serzh.entities.User;
 

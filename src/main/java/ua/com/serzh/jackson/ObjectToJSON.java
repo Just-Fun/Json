@@ -1,12 +1,8 @@
-package ua.com.serzh.mkyong;
+package ua.com.serzh.jackson;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import ua.com.serzh.entities.User;
 
@@ -24,7 +20,7 @@ public class ObjectToJSON {
         try {
             //Convert object to JSON string and save into file directly
 //            mapper.writeValue(new File("D:\\user.json"), user);
-            File file = new File("src/main/resources/jsonTestM.txt");
+            File file = new File("src/main/resources/User.txt");
 //            mapper.writeValue(file, user);
             //            !!! writerWithDefaultPrettyPrinter() !!!
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, user);

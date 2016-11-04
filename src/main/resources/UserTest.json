@@ -1,0 +1,54 @@
+{
+  "name" : "phoneBook",
+  "users" : [ {
+    "userId" : 1,
+    "name" : "Luchano",
+    "password" : "first",
+    "contacts" : [ {
+      "contactId" : 1,
+      "surname" : "Joli",
+      "name" : "Angelina",
+      "patronymic" : "Petrovna",
+      "mobileNumber" : "+380664563345",
+      "homePhone" : "+380444563345",
+      "address" : "Kyiv, Sviatkova 15",
+      "email" : "joli@.gmail.com",
+      "userId" : 1
+    }, {
+      "contactId" : 2,
+      "surname" : "Joli2",
+      "name" : "Angelina2",
+      "patronymic" : "Petrovna2",
+      "mobileNumber" : "+380664563346",
+      "homePhone" : "+380444563346",
+      "address" : "Kyiv, Sviatkova 16",
+      "email" : "joli2@.gmail.com",
+      "userId" : 1
+    } ]
+  }, {
+    "userId" : 1,
+    "name" : "Domingo",
+    "password" : "second",
+    "contacts" : [ {
+      "contactId" : 1,
+      "surname" : "Soprano",
+      "name" : "Angelina",
+      "patronymic" : "Petrovna",
+      "mobileNumber" : "+380664563345",
+      "homePhone" : "+380444563345",
+      "address" : "Kyiv, Sviatkova 15",
+      "email" : "joli@.gmail.com",
+      "userId" : 1
+    }, {
+      "contactId" : 2,
+      "surname" : "Alt",
+      "name" : "Angelina2",
+      "patronymic" : "Petrovna2",
+      "mobileNumber" : "+380664563346",
+      "homePhone" : "+380444563346",
+      "address" : "Kyiv, Sviatkova 16",
+      "email" : "joli2@.gmail.com",
+      "userId" : 1
+    } ]
+  } ]
+}

@@ -1,4 +1,4 @@
-package ua.com.serzh.mkyong;
+package ua.com.serzh.jackson;
 
 /**
  * Created by Serzh on 11/4/16.
