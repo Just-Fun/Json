@@ -1,39 +1,37 @@
-package ua.com.serzh.phonebook;
+package ua.com.serzh.jackson;
 
-import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonArray;
 import com.eclipsesource.json.JsonObject;
-import com.eclipsesource.json.JsonValue;
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.codehaus.jackson.map.ObjectMapper;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+import org.codehaus.jackson.map.type.TypeFactory;
 import ua.com.serzh.entities.Contact;
 import ua.com.serzh.entities.User;
+import ua.com.serzh.gson.Staff;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
-
-//import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Created by Serzh on 11/4/16.
  */
-public class JsonToObjectMinimal {
+public class JsonToObject2 {
     public static void main(String[] args) {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        try (Reader reader = new FileReader("src/main/resources/User.txt")) {
+        try {
             // Convert JSON string from file to Object
-//            File file = new File("src/main/resources/User.txt");
+            File file = new File("src/main/resources/User.txt");
+            User user = mapper.readValue(file, User.class);
+//            System.out.println(user.getContacts());
 
-            JsonObject jsonObject = JsonObject.readFrom(reader);
-            JsonObject jsonObject1 = Json.parse(reader).asObject();
-//            JsonArray jsonArray = JsonArray.readFrom(getJsonInString());
-
-            String name = jsonObject.get( "name" ).asString();
-            JsonArray contacts = jsonObject.get("contacts").asArray();// asLong(),
-            System.out.println(name);
-            System.out.println(contacts.size());
-
+            // Convert JSON string to Object
+  /*          String jsonInString = getJsonInString();
+            User user1 = mapper.readValue(jsonInString, User.class);
+            System.out.println(user1);*/
 
         } catch (IOException e) {
             e.printStackTrace();

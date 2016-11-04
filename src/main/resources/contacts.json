@@ -1,0 +1,75 @@
+{
+  "name" : "contacts",
+  "countId" : 10,
+  "contacts" : [ {
+    "contactId" : 1,
+    "surname" : "Joli",
+    "name" : "Angelina",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 5,
+    "surname" : "Rodriges",
+    "name" : "Emilio",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 2,
+    "surname" : "Rodriges2",
+    "name" : "Emilio2",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 6,
+    "surname" : "Pavarotti",
+    "name" : "Luchano",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 7,
+    "surname" : "PavarottiNew",
+    "name" : "LuchanoNew",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 8,
+    "surname" : "PavarottiNewOne",
+    "name" : "LuchanoNewOne",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 9,
+    "surname" : "PavarottiNewOneT",
+    "name" : "LuchanoNewOneT",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  } ]
+}

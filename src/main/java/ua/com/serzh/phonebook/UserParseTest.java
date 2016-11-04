@@ -1,14 +1,13 @@
-package ua.com.serzh.jackson;
+package ua.com.serzh.phonebook;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import ua.com.serzh.entities.User;
+import ua.com.serzh.phonebookDivide.PhoneBook;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by Serzh on 11/4/16.
@@ -20,14 +19,16 @@ public class UserParseTest {
     public static void main(String[] args) {
         try (FileReader reader = new FileReader(filePath)) {
             JSONParser jsonParser = new JSONParser();
-            JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+            JSONObject phoneBook = (JSONObject) jsonParser.parse(reader);
+
+            PhoneBook phoneBook2 = (PhoneBook) jsonParser.parse(reader);
 
             // get a String from the JSON object
-            String userName = (String) jsonObject.get("name");
-            System.out.println("Object name is: " + userName);
+            String phoneBookName = (String) phoneBook.get("name");
+            System.out.println("Object name is: " + phoneBookName);
 
             // get an array from the JSON object
-            JSONArray users = (JSONArray) jsonObject.get("users");
+            JSONArray users = (JSONArray) phoneBook.get("users");
 
             // take the elements of the json array
             for (int i = 0; i < users.size(); i++) {

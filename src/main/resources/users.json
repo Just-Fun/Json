@@ -1,0 +1,17 @@
+{
+  "name" : "users",
+  "countId" : 3,
+  "users" : [ {
+    "userId" : 1,
+    "name" : "Luchano",
+    "password" : "first"
+  }, {
+    "userId" : 2,
+    "name" : "Domingo",
+    "password" : "second"
+  }, {
+    "userId" : 3,
+    "name" : "Shwartz",
+    "password" : "first"
+  } ]
+}

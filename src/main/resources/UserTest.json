@@ -16,7 +16,7 @@
       "userId" : 1
     }, {
       "contactId" : 2,
-      "surname" : "Joli2",
+      "surname" : "JoliNew",
       "name" : "Angelina2",
       "patronymic" : "Petrovna2",
       "mobileNumber" : "+380664563346",
@@ -26,7 +26,7 @@
       "userId" : 1
     } ]
   }, {
-    "userId" : 1,
+    "userId" : 2,
     "name" : "Domingo",
     "password" : "second",
     "contacts" : [ {
@@ -41,7 +41,7 @@
       "userId" : 1
     }, {
       "contactId" : 2,
-      "surname" : "Alt",
+      "surname" : "Aniston",
       "name" : "Angelina2",
       "patronymic" : "Petrovna2",
       "mobileNumber" : "+380664563346",

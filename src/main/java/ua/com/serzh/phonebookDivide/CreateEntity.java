@@ -1,4 +1,7 @@
-package ua.com.serzh.entities;
+package ua.com.serzh.phonebookDivide;
+
+import ua.com.serzh.entities.Contact;
+import ua.com.serzh.entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,18 +9,11 @@ import java.util.List;
 /**
  * Created by Serzh on 11/4/16.
  */
-public class CreateUserForTest {
+public class CreateEntity {
 
     public static User createUser1() {
         User user = new User("Luchano", "first");
         user.setUserId(1);
-
-        Contact contact1 = createContactTest(user);
-        Contact contact2 = createContactTest2(user);
-
-        List<Contact> contacts = new ArrayList<>();
-        contacts.add(contact1);
-        contacts.add(contact2);
 
         return user;
     }
@@ -26,23 +22,10 @@ public class CreateUserForTest {
         User user = new User("Domingo", "second");
         user.setUserId(2);
 
-        Contact contact1 = createContactTest(user);
-        contact1.setSurname("Soprano");
-        Contact contact2 = createContactTest2(user);
-        contact2.setSurname("Alt");
-
-        List<Contact> contacts = new ArrayList<>();
-        contacts.add(contact1);
-        contacts.add(contact2);
-
         return user;
     }
 
-    private static Contact createContactTest(User user) {
-
-/*        User user = new User( "Serzh",  "first");
-//        User user = new User(1, "Serzh", "first");
-        user.setUserId(1);*/
+    public static Contact createContact1(User user) {
 
         String surname = "Joli";
         String name = "Angelina";
@@ -55,12 +38,12 @@ public class CreateUserForTest {
         Contact contact = new Contact(
                 surname, name, patronymic, mobileNumber, homePhone, address, email, user.getUserId());
 
-        contact.setContactId(1);
+//        contact.setContactId(1);
 
         return contact;
     }
 
-    private static Contact createContactTest2(User user) {
+    public static Contact createContact2(User user) {
 
         String surname = "Joli2";
         String name = "Angelina2";
@@ -73,7 +56,7 @@ public class CreateUserForTest {
         Contact contact = new Contact(
                 surname, name, patronymic, mobileNumber, homePhone, address, email, user.getUserId());
 
-        contact.setContactId(2);
+//        contact.setContactId(2);
 
         return contact;
     }
