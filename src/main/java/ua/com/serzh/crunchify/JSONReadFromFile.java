@@ -1,4 +1,4 @@
-package ua.com.serzh;
+package ua.com.serzh.crunchify;
 
 import java.io.FileReader;
 import java.util.Iterator;
@@ -10,7 +10,7 @@ import org.json.simple.parser.JSONParser;
 /**
  * Created by Serzh on 11/4/16.
  */
-public class CrunchifyJSONReadFromFile {
+public class JSONReadFromFile {
 
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class CrunchifyJSONReadFromFile {
         try {
 
             Object obj = parser.parse(new FileReader(
-                    "/Users/<username>/Documents/file1.txt"));
+                    "src/main/resources/jsonTest.txt"));
 
             JSONObject jsonObject = (JSONObject) obj;
 
@@ -30,10 +30,14 @@ public class CrunchifyJSONReadFromFile {
             System.out.println("Name: " + name);
             System.out.println("Author: " + author);
             System.out.println("\nCompany List:");
-            Iterator<String> iterator = companyList.iterator();
+
+            for (String aCompanyList : (Iterable<String>) companyList) {
+                System.out.println(aCompanyList);
+            }
+            /*Iterator<String> iterator = companyList.iterator();
             while (iterator.hasNext()) {
                 System.out.println(iterator.next());
-            }
+            }*/
 
         } catch (Exception e) {
             e.printStackTrace();
