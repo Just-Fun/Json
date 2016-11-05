@@ -5,6 +5,8 @@ import ua.com.serzh.entities.User;
 
 import java.util.List;
 
+import static ua.com.serzh.phonebookDivide.MapperObjectJson.writeJsonToFile;
+
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -26,7 +28,7 @@ public class UserDaoJSON {
 
     public void addUser(User user) {
         userStore.addUser(user);
-        writeToFile(userStore);
+        writeJsonToFile(userStore, pathName);
     }
 
     public User searchByNameAndPassword(String name, String password) {
@@ -45,39 +47,5 @@ public class UserDaoJSON {
         userNew.setName("ShwartzFIve");
 
         userDaoJSON.addUser(userNew);
-
-//        System.out.println("id: " + user.getUserId() + ", name: " + user.getName() + ", password: " + user.getPassword());
-
-
-    }
-
-/*    private ContactStore getObjectFromFile(String pathName) {
-        ObjectMapper mapper = new ObjectMapper();
-        ContactStore contactDao = null;
-
-        try {
-            File file = new File(pathName);
-            contactDao = mapper.readValue(file, ContactStore.class);
-            return contactDao;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return contactDao;
-    }*/
-
-/*    private UserStore getPhoneBookFromFile(ObjectMapper mapper, String pathName) {
-        UserStore phoneBook = null;
-        try {
-            File file = new File(pathName);
-            phoneBook = mapper.readValue(file, UserStore.class);
-            return phoneBook;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return phoneBook;
-    }*/
-
-    private static void writeToFile(UserStore phoneBook) {
-        MapperObjectJson.writeJsonToFile(phoneBook, pathName);
     }
 }
