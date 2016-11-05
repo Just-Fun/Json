@@ -2,32 +2,34 @@ package ua.com.serzh.phonebookDivide;
 
 import ua.com.serzh.entities.User;
 
+import java.util.ArrayList;
 import java.util.List;
-
-//import org.springframework.stereotype.Component;
 
 /**
  * Created by Serzh on 11/4/16.
  */
 //@Component
-public class PhoneBook {
+public class UserStore {
 
     private String name = "users";
-    int countId;
+    int countUsers;
     private  List<User> users;
 
-    public PhoneBook() {
+    public UserStore() {
+        if (users == null) {
+            users = new ArrayList<>();
+        }
     }
 
-    public int getCountId() {
-        return countId;
+    public int getCountUsers() {
+        return countUsers;
     }
 
-    public void setCountId(int countId) {
-        this.countId = countId;
+    public void setCountUsers(int countUsers) {
+        this.countUsers = countUsers;
     }
 
-    public PhoneBook( List<User> users) {
+    public UserStore(List<User> users) {
         this.users = users;
     }
 
@@ -72,7 +74,6 @@ public class PhoneBook {
         return null;
     }
 
-//    TODO use it for Contact too
     public User update(Integer id, User userNew) {
 
         for (User userOld : users) {
@@ -86,12 +87,11 @@ public class PhoneBook {
         return null;
     }
 
-    public User addUser(User user) {
-        int id = getCountId();
-        user.setUserId(id);
-        setCountId(++id);
+    public void addUser(User user) {
+        int id = getCountUsers();
+        user.setUserId(++id);
+        setCountUsers(id);
         users.add(user);
-        return user;
     }
 
    public User searchByNameAndPassword(String name, String password){

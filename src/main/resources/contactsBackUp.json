@@ -1,5 +1,6 @@
 {
   "name" : "contacts",
+  "countId" : 0,
   "contacts" : [ {
     "contactId" : 1,
     "surname" : "Joli",
@@ -11,37 +12,7 @@
     "email" : "joli@.gmail.com",
     "userId" : 1
   }, {
-    "contactId" : 2,
-    "surname" : "JoliNew",
-    "name" : "Angelina2",
-    "patronymic" : "Petrovna2",
-    "mobileNumber" : "+380664563346",
-    "homePhone" : "+380444563346",
-    "address" : "Kyiv, Sviatkova 16",
-    "email" : "joli2@.gmail.com",
-    "userId" : 1
-  }, {
-    "contactId" : 3,
-    "surname" : "Soprano",
-    "name" : "Angelina",
-    "patronymic" : "Petrovna",
-    "mobileNumber" : "+380664563345",
-    "homePhone" : "+380444563345",
-    "address" : "Kyiv, Sviatkova 15",
-    "email" : "joli@.gmail.com",
-    "userId" : 2
-  }, {
-    "contactId" : 4,
-    "surname" : "Aniston",
-    "name" : "Angelina2",
-    "patronymic" : "Petrovna2",
-    "mobileNumber" : "+380664563346",
-    "homePhone" : "+380444563346",
-    "address" : "Kyiv, Sviatkova 16",
-    "email" : "joli2@.gmail.com",
-    "userId" : 2
-  }, {
-    "contactId" : null,
+    "contactId" : 5,
     "surname" : "Rodriges",
     "name" : "Emilio",
     "patronymic" : "Petrovna",
@@ -49,6 +20,56 @@
     "homePhone" : "+380444563345",
     "address" : "Kyiv, Sviatkova 15",
     "email" : "joli@.gmail.com",
-    "userId" : 5
+    "userId" : 1
+  }, {
+    "contactId" : 2,
+    "surname" : "Rodriges2",
+    "name" : "Emilio2",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 6,
+    "surname" : "Pavarotti",
+    "name" : "Luchano",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 7,
+    "surname" : "PavarottiNew",
+    "name" : "LuchanoNew",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 8,
+    "surname" : "PavarottiNewOne",
+    "name" : "LuchanoNewOne",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 1
+  }, {
+    "contactId" : 10,
+    "surname" : "AlpachinoTwoD",
+    "name" : "SomeTwoD",
+    "patronymic" : "Petrovna",
+    "mobileNumber" : "+380664563345",
+    "homePhone" : "+380444563345",
+    "address" : "Kyiv, Sviatkova 15",
+    "email" : "joli@.gmail.com",
+    "userId" : 2
   } ]
 }

@@ -2,8 +2,8 @@ package ua.com.serzh.phonebook;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import ua.com.serzh.entities.User;
-import ua.com.serzh.phonebookDivide.ObjectToJson;
-import ua.com.serzh.phonebookDivide.PhoneBook;
+import ua.com.serzh.phonebookDivide.MapperObjectJson;
+import ua.com.serzh.phonebookDivide.UserStore;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,8 +24,8 @@ public class JsonToPhoneBook {
         JsonToPhoneBook jsonToPhoneBook = new JsonToPhoneBook();
 
         // Convert JSON string from file to Object
-        PhoneBook phoneBook = jsonToPhoneBook.getPhoneBookFromFile(mapper, pathName);
-        System.out.println("PhoneBook.name: " + phoneBook.getName());
+        UserStore phoneBook = jsonToPhoneBook.getPhoneBookFromFile(mapper, pathName);
+        System.out.println("UserStore.name: " + phoneBook.getName());
 
 //            List<Contact> contacts = user.getContacts();
         List<User> users = phoneBook.getUsers();
@@ -38,12 +38,12 @@ public class JsonToPhoneBook {
         writeToFile(phoneBook);
     }
 
-    private PhoneBook getPhoneBookFromFile(ObjectMapper mapper, String pathName) {
-        PhoneBook phoneBook = null;
+    private UserStore getPhoneBookFromFile(ObjectMapper mapper, String pathName) {
+        UserStore phoneBook = null;
 
         try {
             File file = new File(pathName);
-            phoneBook = mapper.readValue(file, PhoneBook.class);
+            phoneBook = mapper.readValue(file, UserStore.class);
             return phoneBook;
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,7 +51,7 @@ public class JsonToPhoneBook {
         return phoneBook;
     }
 
-    private static void writeToFile(PhoneBook phoneBook) {
-        ObjectToJson.writeJsonToFile(phoneBook, pathName);
+    private static void writeToFile(UserStore phoneBook) {
+        MapperObjectJson.writeJsonToFile(phoneBook, pathName);
     }
 }

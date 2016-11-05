@@ -4,7 +4,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import ua.com.serzh.phonebookDivide.PhoneBook;
+import ua.com.serzh.phonebookDivide.UserStore;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class UserParseTest {
             JSONParser jsonParser = new JSONParser();
             JSONObject phoneBook = (JSONObject) jsonParser.parse(reader);
 
-            PhoneBook phoneBook2 = (PhoneBook) jsonParser.parse(reader);
+            UserStore phoneBook2 = (UserStore) jsonParser.parse(reader);
 
             // get a String from the JSON object
             String phoneBookName = (String) phoneBook.get("name");

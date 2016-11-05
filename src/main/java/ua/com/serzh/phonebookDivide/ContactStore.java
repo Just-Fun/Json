@@ -11,11 +11,14 @@ import java.util.List;
  */
 public class ContactStore {
     private String name = "contacts";
-    int countId;
+    int countContacts;
     private List<Contact> contacts;
     // TODO serialized?
 
     public ContactStore() {
+        if (contacts == null) {
+            contacts = new ArrayList<>();
+        }
     }
 
     public ContactStore(String name, List<Contact> contacts) {
@@ -23,12 +26,12 @@ public class ContactStore {
         this.contacts = contacts;
     }
 
-    public int getCountId() {
-        return countId;
+    public int getCountContacts() {
+        return countContacts;
     }
 
-    public void setCountId(int countId) {
-        this.countId = countId;
+    public void setCountContacts(int countContacts) {
+        this.countContacts = countContacts;
     }
 
     public String getName() {
@@ -49,9 +52,9 @@ public class ContactStore {
 
 
     void insertContact(Contact contact) {
-        int id = getCountId();
-        contact.setContactId(id);
-        setCountId(++id);
+        int id = getCountContacts();
+        contact.setContactId(++id);
+        setCountContacts(id);
         contacts.add(contact);
     }
 
