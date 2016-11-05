@@ -1,5 +1,6 @@
 package ua.com.serzh.phonebookDivide;
 
+import org.apache.commons.lang3.StringUtils;
 import ua.com.serzh.entities.Contact;
 
 import java.util.ArrayList;
@@ -8,16 +9,16 @@ import java.util.List;
 /**
  * Created by Serzh on 11/4/16.
  */
-public class ContactDaoImpl {
+public class ContactStore {
     private String name = "contacts";
     int countId;
     private List<Contact> contacts;
     // TODO serialized?
 
-    public ContactDaoImpl() {
+    public ContactStore() {
     }
 
-    public ContactDaoImpl(String name, List<Contact> contacts) {
+    public ContactStore(String name, List<Contact> contacts) {
         this.name = name;
         this.contacts = contacts;
     }
@@ -106,7 +107,7 @@ public class ContactDaoImpl {
             }
 
             for (String field : fields) {
-                if (field.contains(searchQuery)) {
+                if (StringUtils.containsIgnoreCase(field, searchQuery)) {
                     result.add(contact);
                     continue label;
                 }
